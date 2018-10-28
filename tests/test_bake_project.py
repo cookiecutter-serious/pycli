@@ -1,31 +1,53 @@
-from contextlib import contextmanager
-
 import os
 import subprocess
+from contextlib import contextmanager
+from os.path import isdir, isfile
 
 
 @contextmanager
-def inside_dir(dirpath):
+def inside_dir(path):
     """
     Execute code from inside the given directory
-    :param dirpath: String, path of the directory the command is being run.
+    :param path: String, path of the directory the command is being run.
     """
+    if not isinstance(path, str):
+        path = str(path)
     old_path = os.getcwd()
+
     try:
-        os.chdir(dirpath)
+        os.chdir(path)
         yield
     finally:
         os.chdir(old_path)
 
 
 def test_project_tree(cookies):
-    result = cookies.bake(extra_context={'project_slug': 'test_project'})
+    result = cookies.bake(extra_context={
+        'project_name': 'test project',
+        'project_slug': 'test_project',
+    })
     assert result.exit_code == 0
     assert result.exception is None
-    assert result.project.basename == 'test_project'
+    assert result.project.basename == 'test project'
+
+    files = [
+        'README.rst',
+        'CHANGELOG.rst',
+        'setup.py',
+        'setup.cfg',
+    ]
+    dirs = [
+        'src',
+        'src/test_project',
+    ]
+    with inside_dir(result.project):
+        for path in files:
+            assert isfile(path)
+        for path in dirs:
+            assert isdir(path)
 
 
 def test_run_flake8(cookies):
     result = cookies.bake(extra_context={'project_slug': 'flake8_compat'})
-    with inside_dir(str(result.project)):
+    with inside_dir(result.project):
         subprocess.check_call(['flake8'])
