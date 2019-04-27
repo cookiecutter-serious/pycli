@@ -31,8 +31,8 @@ def test_project_tree(cookies):
     assert result.project.basename == 'test project'
 
     files = [
-        'README.rst',
-        'CHANGELOG.rst',
+        'README.md',
+        'CHANGELOG.md',
         'setup.py',
         'setup.cfg',
     ]
