@@ -1,16 +1,27 @@
-cookiecutter-serious-pycli
-==========================
+# cookiecutter-serious-pycli
 
-A python CLI template with setup.py, pytest and many pytest plugins.
+[![Build Status](https://travis-ci.org/yanqd0/cookiecutter-serious-pycli.svg?branch=master)](https://travis-ci.org/yanqd0/cookiecutter-serious-pycli)
 
-Requirements
-------------
-Install `cookiecutter` command line: `pip install cookiecutter`    
+A python CLI template with `setup.py`, [pytest] and many pytest plugins.
 
-Usage
------
-Generate a new Cookiecutter template layout: `cookiecutter gh:yanqd0/cookiecutter-serious-pycli`    
+[pytest]:https://pytest.org/
 
-License
--------
-This project is licensed under the terms of the [MIT License](/LICENSE)
+## Requirements
+
+Install `cookiecutter` command line:
+
+```sh
+pip install cookiecutter
+```
+
+## Usage
+
+Generate a new Cookiecutter template layout:
+
+```sh
+cookiecutter gh:yanqd0/cookiecutter-serious-pycli
+```
+
+## License
+
+This project is licensed under the terms of the [MIT License](./LICENSE)
