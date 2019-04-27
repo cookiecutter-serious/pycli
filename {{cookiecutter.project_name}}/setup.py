@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
 """Setup the package {{ cookiecutter.project_name }}"""
 
 from runpy import run_path
@@ -10,45 +9,47 @@ from setuptools import find_packages, setup
 _INFO = run_path('src/{{ cookiecutter.project_slug }}/_meta.py')
 
 setup(
+    # Metadata
     author=_INFO['__author__'],
     author_email=_INFO['__email__'],
     url=_INFO['__home__'],
-
     use_scm_version=True,
     zip_safe=False,
-
+    # Package modules and data
     packages=find_packages('src'),
     package_dir={'': 'src'},
+    # Entries
     entry_points={
         'console_scripts': (
             '{{ cookiecutter.project_slug }}={{ cookiecutter.project_slug }}.__main__:main',
         ),
     },
-
+    # Requires
     python_requires='>=3.4',
-    install_requires=[
-
-    ],
+    install_requires=[],
     setup_requires=[
         'pytest-runner',
-        'setuptools_scm',
+        'setuptools-scm',
     ],
     tests_require=[
+        'mock',
         'pytest',
         'pytest-cov',
-        'pytest-pep8',
-        'pytest-flakes',
+        'pytest-flake8',
+        'pytest-isort',
         'pytest-mock',
-        'mock',
+        'pytest-mock',
+        'pytest-pep8',
+        'pytest-pylint',
+        'pytest-yapf',
     ],
-
+    # PyPI Metadata
     keywords=['CLI'],
     platforms=['any'],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Console',
         'Intended Audience :: Developers',
-        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
     ]
