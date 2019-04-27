@@ -35,6 +35,7 @@ def test_project_tree(cookies):
         'CHANGELOG.md',
         'setup.py',
         'setup.cfg',
+        '.gitignore',
     ]
     dirs = [
         'src',
