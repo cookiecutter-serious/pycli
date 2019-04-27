@@ -7,6 +7,18 @@ from runpy import run_path
 from setuptools import find_packages, setup
 
 _INFO = run_path('src/{{ cookiecutter.project_slug }}/_meta.py')
+_TEST_REQUIRES = [
+    'mock',
+    'pytest',
+    'pytest-cov',
+    'pytest-flake8',
+    'pytest-isort',
+    'pytest-mock',
+    'pytest-mock',
+    'pytest-pep8',
+    'pytest-pylint',
+    'pytest-yapf',
+]
 
 setup(
     # Metadata
@@ -31,18 +43,15 @@ setup(
         'pytest-runner',
         'setuptools-scm',
     ],
-    tests_require=[
-        'mock',
-        'pytest',
-        'pytest-cov',
-        'pytest-flake8',
-        'pytest-isort',
-        'pytest-mock',
-        'pytest-mock',
-        'pytest-pep8',
-        'pytest-pylint',
-        'pytest-yapf',
-    ],
+    tests_require=_TEST_REQUIRES,
+    extras_require={
+        'dev': _TEST_REQUIRES + [
+            'flake8',
+            'isort',
+            'pylint',
+            'yapf',
+        ],
+    },
     # PyPI Metadata
     keywords=['CLI'],
     platforms=['any'],
