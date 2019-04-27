@@ -1,10 +1,29 @@
-#!/usr/bin/env python
-# -*- coding:utf-8 -*-
+"""
+The CLI entry of {{ cookiecutter.project_name }}.
+"""
+from argparse import ArgumentParser
 
 
-def main():
-    print("Hello world!")
+def main(argv=None):
+    """
+    {{ cookiecutter.project_short_description }}
+    """
+    parser = ArgumentParser()
+    parser.description = main.__doc__
+    parser.add_argument(
+        '-p', '--print', action='store_true', help='print hello world'
+    )
+    args = parser.parse_args(argv)
+    if args.print:
+        print("Hello world!")
 
 
-if __name__ == '__main__':
-    main()
+def init():
+    """
+    This is a wrapper for unit test only.
+    """
+    if __name__ == '__main__':
+        main()
+
+
+init()
