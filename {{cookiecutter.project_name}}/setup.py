@@ -32,9 +32,9 @@ setup(
     package_dir={'': 'src'},
     # Entries
     entry_points={
-        'console_scripts': (
+        'console_scripts': [
             '{{ cookiecutter.project_slug }}={{ cookiecutter.project_slug }}.__main__:main',
-        ),
+        ],
     },
     # Requires
     python_requires='>=3.4',
