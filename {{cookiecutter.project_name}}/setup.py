@@ -14,10 +14,9 @@ _TEST_REQUIRES = [
     'pytest-flake8',
     'pytest-isort',
     'pytest-mock',
-    'pytest-mock',
     'pytest-pep8',
     'pytest-pylint',
-    'pytest-yapf',
+    'pytest-yapf3>=0.4.0',
 ]
 
 setup(
@@ -61,5 +60,6 @@ setup(
         'Intended Audience :: Developers',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
     ]
 )
