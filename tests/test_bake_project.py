@@ -61,5 +61,8 @@ def test_run_pytest(cookies):
     with inside_dir(result.project):
         subprocess.check_call(['git', 'init'])
         subprocess.check_call(['virtualenv', '.env'])
-        subprocess.check_call(['.env/bin/pip', 'install', '.[dev]'])
-        subprocess.check_call(['.env/bin/pytest'])
+        subprocess.check_call(
+            '. .env/bin/activate && pip install .[dev]',
+            shell=True,
+        )
+        subprocess.check_call('. .env/bin/activate && pytest', shell=True)
