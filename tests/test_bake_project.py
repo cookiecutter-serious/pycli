@@ -22,13 +22,15 @@ def inside_dir(path):
 
 
 def test_project_tree(cookies):
-    result = cookies.bake(extra_context={
-        'project_name': 'test project',
-        'project_slug': 'test_project',
-    })
+    result = cookies.bake(
+        extra_context={
+            'project_name': 'test-project',
+            'project_slug': 'test_project',
+        }
+    )
     assert result.exit_code == 0
     assert result.exception is None
-    assert result.project.basename == 'test project'
+    assert result.project.basename == 'test-project'
 
     files = [
         'README.md',
@@ -52,3 +54,12 @@ def test_run_flake8(cookies):
     result = cookies.bake(extra_context={'project_slug': 'flake8_compat'})
     with inside_dir(result.project):
         subprocess.check_call(['flake8'])
+
+
+def test_run_pytest(cookies):
+    result = cookies.bake(extra_context={'project_name': 'run-pytest'})
+    with inside_dir(result.project):
+        subprocess.check_call(['git', 'init'])
+        subprocess.check_call(['virtualenv', '.env'])
+        subprocess.check_call(['.env/bin/pip', 'install', '.[dev]'])
+        subprocess.check_call(['.env/bin/pytest'])
