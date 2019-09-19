@@ -33,15 +33,18 @@ def test_project_tree(cookies):
     assert result.project.basename == 'test-project'
 
     files = [
-        'README.md',
-        'CHANGELOG.md',
-        'setup.py',
-        'setup.cfg',
         '.gitignore',
+        '.pylintrc',
+        'CHANGELOG.md',
+        'LICENSE',
+        'README.md',
+        'setup.cfg',
+        'setup.py',
     ]
     dirs = [
         'src',
         'src/test_project',
+        'tests',
     ]
     with inside_dir(result.project):
         for path in files:
