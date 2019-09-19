@@ -17,6 +17,7 @@ def test_from_cli(argv):
     assert not out
 
 
+@mark.unit
 @mark.integration
 @mark.parametrize('argv', [
     ['-h'],
@@ -32,6 +33,7 @@ def test_help(argv, capsys: CaptureFixture):
     assert not err
 
 
+@mark.unit
 @mark.integration
 @mark.parametrize('argv', [
     ['-V'],
