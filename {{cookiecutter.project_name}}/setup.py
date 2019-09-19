@@ -36,7 +36,7 @@ setup(
         ],
     },
     # Requires
-    python_requires='>=3.4',
+    python_requires='>=3.5',
     install_requires=[],
     setup_requires=[
         'pytest-runner',
@@ -55,11 +55,13 @@ setup(
     keywords=['CLI'],
     platforms=['any'],
     classifiers=[
+        # See: https://pypi.org/classifiers/
         'Development Status :: 3 - Alpha',
         'Environment :: Console',
         'Intended Audience :: Developers',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'License :: OSI Approved :: MIT License',
     ]
 )
