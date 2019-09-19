@@ -60,7 +60,7 @@ def test_run_pytest(cookies):
     result = cookies.bake(extra_context={'project_name': 'run-pytest'})
     with inside_dir(result.project):
         subprocess.check_call(['git', 'init'])
-        subprocess.check_call(['virtualenv', '.env'])
+        subprocess.check_call(['python', '-m', 'venv', '.env'])
         subprocess.check_call(
             '. .env/bin/activate && pip install .[dev]',
             shell=True,
