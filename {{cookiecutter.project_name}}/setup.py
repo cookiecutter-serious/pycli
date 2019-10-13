@@ -48,7 +48,7 @@ setup(
         'dev': _TEST_REQUIRES + [
             'flake8',
             'isort',
-            'pylint>=2.4.2',
+            'pylint<2.3.0',
             'yapf',
         ],
     },
