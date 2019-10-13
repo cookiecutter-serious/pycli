@@ -86,6 +86,16 @@ pip install -e .[dev]
 
 Now, you can develop and run tests.
 
+**Note**: A recent version of `setuptools` is necessary.
+Besides, it may be required to install `setuptools-scm` and `pytest-runner` manually,
+in some environment depending on proxy.
+If there is any problem when installing with `pip`, try to prepare these first:
+
+```sh
+pip install -U setuptools
+pip install setuptools-scm pytest-runner
+```
+
 ## Tests
 
 ```sh
