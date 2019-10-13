@@ -16,6 +16,7 @@ Now, it supports:
     - pylint
     - yapf
     - isort
+    - docstyle
 
 Other features:
 
@@ -43,10 +44,10 @@ I start this project to prove that Python can also construct a serious maintaina
 A serious python project should start and keep a 100% coverage, at least for unit tests.
 Compilation can prevent syntax or other low level issues, while Python don't have it.
 So without 100% test coverage, you may be suffered.
-Besides, with various linters, the maintainity will be good enough.
+Besides, with various linters, the maintainability will be good enough.
 
 Of course, there will be some costs in your development efficiency.
-But you can trade it with maintainity freely:
+But you can trade it with maintainability freely:
 Deliver functions without tests, than make up afterwards, with a good project structure.
 
 After some time, you can fly again.
