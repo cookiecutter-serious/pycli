@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Setup the package {{ cookiecutter.project_name }}"""
+"""Setup the package {{ cookiecutter.project_name }}."""
 
 from runpy import run_path
 
@@ -11,6 +11,7 @@ _TEST_REQUIRES = [
     'mock',
     'pytest',
     'pytest-cov',
+    'pytest-docstyle',
     'pytest-flake8',
     'pytest-isort',
     'pytest-mock',

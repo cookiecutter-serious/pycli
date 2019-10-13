@@ -4,7 +4,7 @@
     "github_username": "Your GitHub username",
     "project_name": "demo-project",
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
-    "project_short_description": "A short description of the project",
+    "project_short_description": "Try to do something great.",
     "year": "{% now 'utc', '%Y' %}",
     "_extensions": ["jinja2_time.TimeExtension"]
 }

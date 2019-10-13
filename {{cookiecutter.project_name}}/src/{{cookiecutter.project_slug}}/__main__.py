@@ -1,15 +1,11 @@
-"""
-The CLI entry of {{ cookiecutter.project_name }}.
-"""
+"""The CLI entry of {{ cookiecutter.project_name }}."""
 from argparse import ArgumentParser
 
 from ._version import __version__ as version
 
 
 def main(argv=None):
-    """
-    {{ cookiecutter.project_short_description }}
-    """
+    """{{ cookiecutter.project_short_description }}"""
     parser = ArgumentParser()
     parser.description = main.__doc__
     parser.add_argument(
@@ -22,9 +18,7 @@ def main(argv=None):
 
 
 def init():
-    """
-    This is a wrapper for unit test only.
-    """
+    """For unit test only."""
     if __name__ == '__main__':
         main()
 
