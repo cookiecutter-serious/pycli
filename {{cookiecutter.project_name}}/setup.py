@@ -11,7 +11,7 @@ _TEST_REQUIRES = [
     'mock',
     'pytest',
     'pytest-cov',
-    'pytest-docstyle',
+    'pytest-docstyle<2',
     'pytest-flake8',
     'pytest-isort',
     'pytest-mock',
