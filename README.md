@@ -1,6 +1,6 @@
 # cookiecutter-serious-pycli
 
-[![Build Status](https://travis-ci.org/yanqd0/cookiecutter-serious-pycli.svg?branch=master)](https://travis-ci.org/yanqd0/cookiecutter-serious-pycli)
+[![Build Status](https://travis-ci.org/cookiecutter-serious/pycli.svg?branch=master)](https://travis-ci.org/cookiecutter-serious/pycli)
 [![Code style: yapf](https://img.shields.io/badge/code%20style-yapf-blue)](https://github.com/google/yapf)
 
 A python CLI template with `setup.py`, [pytest] and many pytest plugins.
@@ -67,9 +67,9 @@ pip install cookiecutter
 Generate a new CookieCutter template layout:
 
 ```sh
-cookiecutter gh:yanqd0/cookiecutter-serious-pycli
+cookiecutter gh:cookiecutter-serious/pycli
 # or
-cookiecutter https://github.com/yanqd0/cookiecutter-serious-pycli.git
+cookiecutter https://github.com/cookiecutter-serious/pycli.git
 ```
 
 After the project is generated, setup the development environment like that:
@@ -78,7 +78,7 @@ After the project is generated, setup the development environment like that:
 cd demo-project
 git init
 git add .
-git cm -m 'Initialize the project with cookiecutter-serious-pycli'
+git cm -m 'Initialize the project with cookiecutter-serious/pycli'
 
 virtualenv -p python3 .env
 . .env/bin/activate
