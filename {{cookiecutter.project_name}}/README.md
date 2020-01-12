@@ -1,6 +1,7 @@
 # {{ cookiecutter.project_name }} - {{ cookiecutter.project_short_description }}
 
 [![Code style: yapf](https://img.shields.io/badge/code%20style-yapf-blue)](https://github.com/google/yapf)
+[![License](https://img.shields.io/github/license/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }})](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/blob/master/LICENSE)
 
 ## Getting Started
 
@@ -8,7 +9,7 @@
 
 Some prerequisites need to be installed.
 
-- Python 3.4+
+- Python 3.5+
 
 ### Installing
 

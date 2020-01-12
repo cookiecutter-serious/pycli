@@ -11,12 +11,12 @@ Now, it supports:
 - Integration test
 - Coverage report for each test above
 - Linters
-    - pep8
     - flake8
     - pylint
     - yapf
     - isort
-    - docstyle
+    - pycodestyle
+    - pydocstyle
 
 Other features:
 

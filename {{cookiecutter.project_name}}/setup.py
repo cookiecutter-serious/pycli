@@ -10,8 +10,9 @@ _INFO = run_path('src/{{ cookiecutter.project_slug }}/_meta.py')
 _TEST_REQUIRES = [
     'mock',
     'pytest',
+    'pytest-pycodestyle',
     'pytest-cov',
-    'pytest-docstyle<2',
+    'pytest-pydocstyle',
     'pytest-flake8',
     'pytest-isort',
     'pytest-mock',
@@ -63,6 +64,7 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
         'License :: OSI Approved :: MIT License',
     ]
 )
